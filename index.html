@@ -1,9 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homoki Roland | IT Szerviz & Tanácsadás</title>
+    <!-- Modern betűtípus betöltése a Google-től -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ALAP BEÁLLÍTÁSOK (A Színek és a Formák) --- */
+        :root {
+            --bg-dark: #0f172a;       /* Sötétkék/szürke háttér */
+            --bg-card: #1e293b;       /* Kártyák háttere (kicsit világosabb) */
+            --text-main: #f8fafc;     /* Fő szövegszín (majdnem fehér) */
+            --text-muted: #94a3b8;    /* Halványabb szöveg (alcímekhez) */
+            --accent: #0ea5e9;        /* "Tech-kék" kiemelő szín */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { margin-top: 0; }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- SZEKCIÓK STÍLUSAI --- */
+        section {
+            padding: 80px 0; /* Nagy üres tér a szekciók között */
+        }
+
+        /* 1. Hero Szekció (Kezdőkép) */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 span {
+            color: var(--accent); /* A kék szín alkalmazása a címsor egy részére */
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0284c7; /* Sötétebb kék, ha ráviszed az egeret */
+        }
+
+        /* 3. Szolgáltatások (Kártyás elrendezés CSS Grid segítségével) */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 10px;
+            border-top: 4px solid var(--accent); /* Kék csík a kártya tetején */
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Kicsit felemelkedik, ha ráviszed az egeret */
+        }
+
+        .card h3 { font-size: 1.3rem; margin-bottom: 15px; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
+        .card-icon { font-size: 2.5rem; margin-bottom: 15px; }
+
+        /* 5. Lábléc (Kapcsolat) */
+        footer {
+            background-color: #020617;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        footer h2 { margin-bottom: 20px; }
+        footer p { color: var(--text-muted); font-size: 1.1rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+    </style>
+</head>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+    <!-- 1. HERO SZEKCIÓ -->
+    <section class="hero">
+        <div class="container">
+            <h1>Lassú a gép? Fekete a képernyő? <span>Megoldom.</span></h1>
+            <p>Profi számítógép szerviz, hardveres/szoftveres karbantartás és IT tanácsadás magánszemélyeknek és cégeknek egyaránt.</p>
+            <a href="#kapcsolat" class="btn">Kérj segítséget!</a>
+        </div>
+    </section>
+
+    <!-- 2. RÓLAM SZEKCIÓ -->
+    <section id="rolam" class="container">
+        <h2>Kire bízod a géped?</h2>
+        <p style="color: var(--text-muted); max-width: 800px;">
+            Homoki Roland vagyok, és informatikai problémák megoldásával foglalkozom. Legyen szó egy haldokló merevlemez megmentéséről, egy új, erős gamer PC összeépítéséről, vagy a rendszered maximális teljesítményre hangolásáról, a célom az, hogy a technika érted dolgozzon, ne ellened.
+        </p>
+    </section>
+
+    <!-- 3. SZOLGÁLTATÁSOK SZEKCIÓ -->
+    <section id="szolgaltatasok" class="container">
+        <h2>Miben tudok segíteni?</h2>
+        <div class="services-grid">
+            
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Szerviz & Karbantartás</h3>
+                <p>Alkatrészek cseréje, fizikai tisztítás, portalanítás, túlmelegedési problémák és hibaüzenetek elhárítása.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>Szoftveres Hangolás</h3>
+                <p>Operációs rendszerek (Windows) újratelepítése, vírusirtás, szoftveres optimalizálás és driverek frissítése.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🧠</div>
+                <h3>IT Tanácsadás</h3>
+                <p>Új gép vagy alkatrész vásárlása előtti konzultáció, hogy pontosan azt vedd meg, amire valóban szükséged van.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Egyedi Projektek</h3>
+                <p>Szoftverfordítások, speciális szoftverkörnyezetek beállítása tartalomgyártók, streamerek számára.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. REFERENCIÁK SZEKCIÓ (Egyelőre placeholder) -->
+    <section id="referenciak" class="container">
+        <h2>Néhány korábbi munkám</h2>
+        <p style="color: var(--text-muted);">Ide jöhetnek majd a "Before/After" képek egy poros és egy kitisztított gépről, vagy egy sikeresen helyreállított rendszer képernyőképe.</p>
+        <!-- Ide majd beillesztjük a képeket, ha megvannak! -->
+    </section>
+
+    <!-- 5. KAPCSOLAT SZEKCIÓ -->
+    <footer id="kapcsolat">
+        <div class="container">
+            <h2>Lépjünk kapcsolatba!</h2>
+            <p>Helyszín: <strong>Lajosmizse és környéke</strong> (vagy online távsegítség)</p>
+            <p>Email: <a href="mailto:test@test.hu">hello@zuppaq.hu</a></p>
+            <p>Telefon: <a href="tel:+36301234567">+36 30 123 4567</a></p>
+            <br>
+            <p style="font-size: 0.8rem; margin-top: 40px;">&copy; 2026 Zuppaq IT Szerviz. Minden jog fenntartva.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
