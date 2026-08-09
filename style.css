@@ -94,6 +94,7 @@
 
         .card:hover {
             transform: translateY(-5px); /* Kicsit felemelkedik, ha ráviszed az egeret */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* Ez az új fehér neon ragyogás */
         }
 
         .card:hover .card-icon {
