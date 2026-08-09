@@ -1,9 +1,9 @@
-       root {
-            bg-dark: #0f172a;       /* Sötétkék/szürke háttér */
-            bg-card: #1e293b;       /* Kártyák háttere (kicsit világosabb) */
-            text-main: #f8fafc;     /* Fő szövegszín (majdnem fehér) */
-            text-muted: #94a3b8;    /* Halványabb szöveg (alcímekhez) */
-            accent: #0ea5e9;        /* "Tech-kék" kiemelő szín */
+       :root {
+            --bg-dark: #0f172a;       /* Sötétkék/szürke háttér */
+            --bg-card: #1e293b;       /* Kártyák háttere (kicsit világosabb) */
+            --text-main: #f8fafc;     /* Fő szövegszín (majdnem fehér) */
+            --text-muted: #94a3b8;    /* Halványabb szöveg (alcímekhez) */
+            --accent: #0ea5e9;        /* "Tech-kék" kiemelő szín */
         }
 
         body {
