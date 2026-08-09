@@ -96,8 +96,20 @@
             transition: transform 0.3s;
         }
 
+        .card-icon {
+            font-size: 2.5rem;          /* Kellemesen nagy és hangsúlyos méret */
+            color: #007bff;             /* A "tech-kék" szín - ha van a gombjaidnak saját színe, írd át arra a kódra! */
+            margin-bottom: 15px;        /* Távolság az ikon és a címsor között */
+            text-align: center;         /* Középre igazítás */
+            transition: transform 0.3s ease; /* Animáció előkészítése */
+        }
+
         .card:hover {
             transform: translateY(-5px); /* Kicsit felemelkedik, ha ráviszed az egeret */
+        }
+
+        .card:hover .card-icon {
+            transform: scale(1.15);
         }
 
         .card h3 { font-size: 1.3rem; margin-bottom: 15px; }
@@ -137,7 +149,7 @@
         egyedi projektről lenne szó, szívesen állok rendelkezésére!</p>
     </section>
 
-    <!-- 3. SZOLGÁLTATÁSOK SZEKCIÓ -->
+  <!-- 3. SZOLGÁLTATÁSOK SZEKCIÓ -->
     <section id="szolgaltatasok" class="container">
         <h2>Miben tudok segíteni?</h2>
         <div class="services-grid">
@@ -149,19 +161,19 @@
             </div>
 
             <div class="card">
-                <div class="card-icon">⚙️</div>
+                <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
                 <h3>Szoftveres Hangolás</h3>
                 <p>Operációs rendszerek újratelepítése, vírusirtás, szoftveres optimalizálás és driverek frissítése.</p>
             </div>
 
             <div class="card">
-                <div class="card-icon">🧠</div>
+                <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
                 <h3>Informatikai szaktanácsadás</h3>
                 <p>Új számítógép vagy alkatrész vásárlása előtti konzultáció, hogy pontosan azt vegye meg, amire valóban szüksége van.</p>
             </div>
 
             <div class="card">
-                <div class="card-icon">🚀</div>
+                <div class="card-icon"><i class="fa-solid fa-server"></i></div>
                 <h3>Egyedi Projektek</h3>
                 <p>Multimedia szerver, egyedi igényekre szabott NAS, illetve egyéb, a fentiekbe nem kategorizált munkák.</p>
             </div>
