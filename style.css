@@ -81,7 +81,7 @@
             padding: 30px;
             border-radius: 10px;
             border-top: 4px solid var(--accent); /* Kék csík a kártya tetején */
-            transition: transform 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card-icon {
